@@ -42,9 +42,51 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const links = document.querySelectorAll("a");
-links[0].textContent = "Services";
-links[1].textContent = "Product";
-links[2].textContent = "Vision";
-links[3].textContent = "Features";
-links[4].textContent = "About";
-links[5].textContent = "Contact";
+links[0].textContent = siteContent["nav"]["nav-item-1"];
+links[1].textContent = siteContent["nav"]["nav-item-2"];
+links[2].textContent = siteContent["nav"]["nav-item-3"];
+links[3].textContent = siteContent["nav"]["nav-item-4"];
+links[4].textContent = siteContent["nav"]["nav-item-5"];
+links[5].textContent = siteContent["nav"]["nav-item-6"];
+links.forEach(link => {
+  link.style.color = "green";
+});
+
+const linksParent = document.querySelector("nav");
+
+const title = document.querySelector("h1");
+title.textContent = siteContent["cta"]["h1"];
+
+const button = document.querySelector("button");
+button.textContent = siteContent["cta"]["button"];
+
+const ctaImg = document.getElementById("cta-img");
+ctaImg.src = siteContent["cta"]["img-src"];
+
+const contentTitles = document.querySelectorAll("h4");
+contentTitles[0].textContent = siteContent["main-content"]["features-h4"];
+contentTitles[1].textContent = siteContent["main-content"]["about-h4"];
+contentTitles[2].textContent = siteContent["main-content"]["services-h4"];
+contentTitles[3].textContent = siteContent["main-content"]["product-h4"];
+contentTitles[4].textContent = siteContent["main-content"]["vision-h4"];
+contentTitles[5].textContent = siteContent["contact"]["contact-h4"];
+
+const topContent = document.querySelectorAll(".top-content .text-content p");
+topContent[0].textContent = siteContent["main-content"]["features-content"];
+topContent[1].textContent = siteContent["main-content"]["about-content"];
+
+const middleImg = document.getElementById("middle-img");
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+const bottomContent = document.querySelectorAll(".bottom-content .text-content p")
+bottomContent[0].textContent = siteContent["main-content"]["services-content"];
+bottomContent[1].textContent = siteContent["main-content"]["product-content"];
+bottomContent[2].textContent = siteContent["main-content"]["vision-content"];
+
+const contactContent = document.querySelectorAll(".contact p");
+contactContent[0].textContent = siteContent["contact"]["address"];
+contactContent[1].textContent = siteContent["contact"]["phone"];
+contactContent[0].textContent = siteContent["contact"]["email"];
+
+const footerContent = document.querySelector("footer p");
+footerContent.textContent = siteContent["footer"]["copyright"];
