@@ -52,7 +52,16 @@ links.forEach(link => {
   link.style.color = "green";
 });
 
-const linksParent = document.querySelector("nav");
+const newNav1 = document.createElement("a");
+newNav1.textContent = "Locations";
+newNav1.style.color = "green";
+const navParent = document.querySelector("nav");
+navParent.append(newNav1);
+
+const newNav2 = document.createElement("a");
+newNav2.textContent = "Home";
+newNav2.style.color = "green";
+navParent.prepend(newNav2);
 
 const title = document.querySelector("h1");
 title.textContent = siteContent["cta"]["h1"];
