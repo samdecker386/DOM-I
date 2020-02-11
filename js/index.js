@@ -37,6 +37,16 @@ const siteContent = {
   },
 };
 
+const header = document.querySelector("header");
+header.style.borderRadius = "5px";
+header.addEventListener("mouseenter", (event) => {
+  event.target.style.background = "#F8F8F8";
+  event.target.style.padding = "0 2% 2%";
+});
+header.addEventListener("mouseleave", (event) => {
+  event.target.style.background = "white";
+});
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -49,18 +59,18 @@ links[3].textContent = siteContent["nav"]["nav-item-4"];
 links[4].textContent = siteContent["nav"]["nav-item-5"];
 links[5].textContent = siteContent["nav"]["nav-item-6"];
 links.forEach(link => {
-  link.style.color = "green";
+  link.style.color = "#3CB371";
 });
 
 const newNav1 = document.createElement("a");
 newNav1.textContent = "Locations";
-newNav1.style.color = "green";
+newNav1.style.color = "#3CB371";
 const navParent = document.querySelector("nav");
 navParent.append(newNav1);
 
 const newNav2 = document.createElement("a");
 newNav2.textContent = "Home";
-newNav2.style.color = "green";
+newNav2.style.color = "#3CB371";
 navParent.prepend(newNav2);
 
 const title = document.querySelector("h1");
@@ -68,6 +78,15 @@ title.textContent = siteContent["cta"]["h1"];
 
 const button = document.querySelector("button");
 button.textContent = siteContent["cta"]["button"];
+button.style.borderRadius = "5px";
+button.addEventListener("click", (event) => {
+  event.target.style.background = "dodgerblue";
+  event.target.style.color = "white";
+})
+button.addEventListener("dblclick", (event) => {
+  event.target.style.background = "white";
+  event.target.style.color = "black";
+})
 
 const ctaImg = document.getElementById("cta-img");
 ctaImg.src = siteContent["cta"]["img-src"];
@@ -86,6 +105,7 @@ topContent[1].textContent = siteContent["main-content"]["about-content"];
 
 const middleImg = document.getElementById("middle-img");
 middleImg.src = siteContent["main-content"]["middle-img-src"];
+middleImg.style.borderRadius = "5px";
 
 const bottomContent = document.querySelectorAll(".bottom-content .text-content p")
 bottomContent[0].textContent = siteContent["main-content"]["services-content"];
